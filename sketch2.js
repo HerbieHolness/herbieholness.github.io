@@ -2,7 +2,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
-  background(0, 0, 255);
 }
 
 function windowResized() {
@@ -10,6 +9,9 @@ function windowResized() {
 }
 
 function draw() {
+  fill(0, 0, 255, 10); // Semi-transparent background
+  rect(0, 0, width, height); // Draw a translucent rectangle to fade the trail
+
   rectMode(CORNER);
   colorMode(RGB);
   fill(255, 255, 255, 100);
