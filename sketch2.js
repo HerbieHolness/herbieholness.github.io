@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
-  background(0, 0, 360);
+  background(0, 0, 255);
 }
 
 function windowResized() {
@@ -12,7 +12,7 @@ function windowResized() {
 function draw() {
   rectMode(CORNER);
   colorMode(RGB);
-  fill(255, 255, 255, 25);
+  fill(255, 255, 255, 100);
   rect(0, 0, width, height);
 
   colorMode(HSB, 360, 100, 100, 100);
