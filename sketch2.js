@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
-  background(0, 0, 255);
+  background(0, 0, 360);
 }
 
 function windowResized() {
