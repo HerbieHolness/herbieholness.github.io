@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <body style="background-color:black;">
+    <meta charset="UTF-8" />
+    <title>HERBiE</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0; /* Put canvas in the back */
+      }
+
+      #title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        font-size: 3em;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        z-index: 1; /* On top of canvas */
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">HERBiE</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
