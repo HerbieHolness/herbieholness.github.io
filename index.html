@@ -45,7 +45,7 @@
         z-index: 1; /* On top of canvas */
         font-family: sans-serif;
       }
-        #subsubtitle {
+      #subsubtitle {
         position: absolute;
         bottom: 10%;
         left: 50%;
@@ -56,12 +56,25 @@
         z-index: 1; /* On top of canvas */
         font-family: sans-serif;
       }
+      
+      #herbie-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30%;     
+        height: auto;    
+        transform: translate(-50%, -50%);
+        z-index: 1;         
+        border-radius: 8px; 
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
+      }
     </style>
   </head>
   <body>
     <div id="title">HERBiE</div>
     <div id="subtitle">page content coming soon...</div>
     <div id="subsubtitle">(this landing page is more fun on desktop)</div>
+    <video id="herbie-video" z-index="1" autoplay playsinline muted src="vid.MOV"></video>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
     <script src="sketch2.js"></script>
