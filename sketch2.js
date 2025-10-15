@@ -28,7 +28,7 @@ function draw() {
   fill(0, 0, 255, 10);
   rect(0, 0, width, height);
 
-  fill(isDarkMode ? 20 : 255, 20, 20, isDarkMode ? 100 : 10);
+  fill(isDarkMode ? 20 : 255, 255, 255, isDarkMode ? 100 : 10, 10, 10);
   rect(0, 0, width, height);
 
   colorMode(HSB, 360, 100, 100, 100);
