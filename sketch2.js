@@ -1,7 +1,6 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  colorMode(HSB, 360, 100, 100, 100);
 }
 
 function windowResized() {
@@ -9,14 +8,12 @@ function windowResized() {
 }
 
 function draw() {
-  fill(0, 0, 255, 10); // Semi-transparent background
-  rect(0, 0, width, height); // Draw a translucent rectangle to fade the trail
-
+  fill(0, 0, 255, 10);
+  rect(0, 0, width, height);
   rectMode(CORNER);
   colorMode(RGB);
   fill(20, 20, 20, 100);
   rect(0, 0, width, height);
-
   colorMode(HSB, 360, 100, 100, 100);
   let t = millis() / 1000;
   let num = map(sin((TWO_PI / 5) * t), -1, 1, 25, 50);
