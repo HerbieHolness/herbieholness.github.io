@@ -16,7 +16,7 @@ function setup() {
   noStroke();
   toggleBtn = createImg(darkModeIcon.canvas.toDataURL(), 'Toggle dark mode');
   toggleBtn.id('toggle-btn');
-  toggleBtn.size(100, 100);
+  toggleBtn.size(200, 200);
   toggleBtn.position(20, 20);
   toggleBtn.mousePressed(toggleMode);
 }
