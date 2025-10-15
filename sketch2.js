@@ -65,13 +65,22 @@ function touchMoved() {
 function toggleMode() {
   isDarkMode = (isDarkMode + 1) % 3; // Cycle through 0, 1, 2
   console.log(isDarkMode);
-  document.body.classList.toggle('dark-mode');
   
   if (isDarkMode === 0) {
     toggleBtn.elt.src = darkModeIcon.canvas.toDataURL();
   } else if (isDarkMode === 1) {
     toggleBtn.elt.src = lightModeIcon.canvas.toDataURL();
+    document.getElementById('link').classList.toggle('dark-mode');
+    document.getElementById('subsubtitle').classList.toggle('dark-mode');
+
+
   } else if (isDarkMode === 2) {
     toggleBtn.elt.src = blueModeIcon.canvas.toDataURL();
+    document.getElementById('link').classList.toggle('dark-mode');
+    document.getElementById('subsubtitle').classList.toggle('dark-mode');
+
+
+    
   }
+  console.log(document.body.classList.contains('dark-mode'))
 }
