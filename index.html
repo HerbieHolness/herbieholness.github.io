@@ -61,6 +61,18 @@
         
       }
       
+      #link {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        z-index: 2;
+        font-family: sans-serif;
+        font-size: clamp(0.8em, 2vh, 5vw);
+      }
       #herbie-video {
         position: absolute;
         top: 50%;
@@ -79,6 +91,8 @@
     <div id="subtitle">I am a young creative based in London.
     <br>
     I looking for work in UI/UX, Web Design or Graphic Design</div>
+    <a id="link" href="mailto:herbie@herbi.ee">herbie@herbi.ee</a>
+
     <div id="subsubtitle">(this page is very much still in development)</div>
     <video id="herbie-video" z-index="1" autoplay playsinline muted loop src="vid.mp4"></video>
 
