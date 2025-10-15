@@ -51,8 +51,8 @@ function toggleMode() {
   document.body.classList.toggle('dark-mode');
   
   if (isDarkMode) {
-    toggleBtn.elt.src = lightModeIcon.canvas.toDataURL();
-  } else {
     toggleBtn.elt.src = darkModeIcon.canvas.toDataURL();
+  } else {
+    toggleBtn.elt.src = lightModeIcon.canvas.toDataURL();
   }
 }
