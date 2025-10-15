@@ -11,7 +11,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  toggleBtn = createImg(lightModeIcon.canvas.toDataURL(), 'Toggle dark mode');
+  toggleBtn = createImg(darkModeIcon.canvas.toDataURL(), 'Toggle dark mode');
   toggleBtn.id('toggle-btn');
   toggleBtn.size(100, 100);
   toggleBtn.position(20, 20);
