@@ -1,13 +1,21 @@
 
-
 let isDarkMode = true; 
+let toggleBtn;
+let lightModeIcon, darkModeIcon;
 
+function preload() {
+  lightModeIcon = loadImage('sun.png');
+  darkModeIcon = loadImage('moon.png');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  let toggleButton = createButton('dark mode toggle');
-  toggleButton.mousePressed(toggleTheme);
+  toggleBtn = createImg(lightModeIcon.canvas.toDataURL(), 'Toggle dark mode');
+  toggleBtn.id('toggle-btn');
+  toggleBtn.size(100, 100);
+  toggleBtn.position(20, 20);
+  toggleBtn.mousePressed(toggleMode);
 }
 
 function windowResized() {
@@ -15,7 +23,6 @@ function windowResized() {
 }
 
 function draw() {
-
   fill(0, 0, 255, 10);
   rect(0, 0, width, height);
   rectMode(CORNER);
@@ -32,7 +39,6 @@ function draw() {
   let hueValue = (t * 60) % 360;
   let x = mouseX || touches[0]?.x || width / 2;
   let y = mouseY || touches[0]?.y || height / 2;
-
   fill(hueValue, 100, 100);
   ellipse(x, y, num);
 }
@@ -40,6 +46,13 @@ function draw() {
 function touchMoved() {
   return false;
 }
-function toggleTheme() {
-  isDarkMode = !isDarkMode; // Flip the boolean value
+function toggleMode() {
+  isDarkMode = !isDarkMode;
+  document.body.classList.toggle('dark-mode');
+  
+  if (isDarkMode) {
+    toggleBtn.elt.src = lightModeIcon.canvas.toDataURL();
+  } else {
+    toggleBtn.elt.src = darkModeIcon.canvas.toDataURL();
+  }
 }
