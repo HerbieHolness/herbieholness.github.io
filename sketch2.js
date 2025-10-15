@@ -47,7 +47,7 @@ function touchMoved() {
   return false;
 }
 function toggleMode() {
-  isDarkMode = !isDarkMode;
+  
   document.body.classList.toggle('dark-mode');
   
   if (isDarkMode) {
@@ -55,4 +55,5 @@ function toggleMode() {
   } else {
     toggleBtn.elt.src = lightModeIcon.canvas.toDataURL();
   }
+  isDarkMode = !isDarkMode;
 }
