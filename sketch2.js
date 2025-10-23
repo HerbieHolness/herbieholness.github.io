@@ -22,12 +22,12 @@ function draw() {
   colorMode(RGB);
   if (isDarkMode === 0) {
     bluemode = false;
-    fill(20, 20, 20, 100); 
+    fill(20, 20, 20, 10); 
   } else if (isDarkMode === 1) {
     bluemode = false;
     fill(255, 255, 255, 10);
   } else {
-    fill(0, 0, 255, 100);
+    fill(0, 0, 255, 10);
     bluemode = true;
   }
 
